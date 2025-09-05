@@ -1,0 +1,12 @@
+1#@#lhs_expression
+2#@#lhs_width
+3#@#rhs_width
+4#@#module
+5#@#file
+6#@#line
+7#@#count
+8#@#limit
+9#@#signal
+10#@#line1
+11#@#line2
+

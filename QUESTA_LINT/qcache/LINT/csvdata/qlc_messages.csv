@@ -1,0 +1,5 @@
+Index@CheckId@Status@Category@DesignCategory@Severity@FileId@Module@ArgList@ClusterInfo@OldRtlId
+a9283896@0@uninspected@Rtl Design Style@Rtl Design Style@Info@0@"APB_SLAVE"@"0:PRDATA#1:32#2:56#3:APB_SLAVE#4:E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v#rtl_id:b2cfba92_00200"@"0"@"b2cfba92_00100:"
+fc8f3383@1@uninspected@Rtl Design Style@Rtl Design Style@Info@0@"APB_SLAVE"@"0:6#1:5#2:APB_SLAVE#3:E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v#"@"0"@""
+2b1ee7aa@2@uninspected@Rtl Design Style@Rtl Design Style@Warning@0@"APB_SLAVE"@"0:PRDATA#1:APB_SLAVE#2:E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v#3:2#"@"0"@""
+

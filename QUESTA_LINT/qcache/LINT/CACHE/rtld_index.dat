@@ -1,0 +1,39 @@
+>8
+v366
+t33
+c34
+#8 p1436 @zi_const_32'h2_o32
+#0 p0 @zi_dff_o2_i2_5*i1_i2_3*i1
+#1 p273 @zi_dff_o32_i32_5*i1_i32_3*i1
+#2 p552 @zi_oper_24_o1_i1
+#3 p683 @zi_mux_o32_i1_2*i32
+#4 p848 @zi_const_32'b1_o32
+#5 p976 @zi_oper_14_o1_2*i32
+#6 p1134 @zi_const_27'b0_o27
+#7 p1262 @zi_oper_32_o32_i27_i5
+#9 p1564 @zi_const_32'h3_o32
+#10 p1692 @zi_const_24'b0_o24
+#11 p1821 @zi_oper_32_o32_i24_i8
+#12 p1996 @zi_const_16'b0_o16
+#13 p2125 @zi_oper_32_o32_2*i16
+#14 p2289 @zi_const_2'h2_o2
+#15 p2414 @zi_oper_14_o1_2*i2
+#16 p2571 @zi_oper_26_o1_2*i1
+#17 p2718 @zi_oper_25_o1_2*i1
+#18 p2865 @zi_const_32'b0_o32
+#19 p2994 @zi_const_32'h4_o32
+#20 p3123 @zi_const_28'b0_o28
+#21 p3252 @zi_oper_32_o32_i28_i4
+#22 p3427 @zi_mux_o2_i1_2*i2
+#23 p3590 @zi_mux_o1_3*i1
+#24 p3740 @zi_const_2'b0_o2
+#25 p3865 @zi_oper_16_o1_2*i2
+#26 p4022 @zi_const_2'b1_o2
+#27 p4147 @zi_oper_29_o1_2*i1
+#28 p4294 @zi_assign_o2_i2
+#29 p4425 @zi_oper_38_o4_i32
+#30 p4571 @zi_oper_38_o5_i32
+#31 p4717 @zi_oper_38_o8_i32
+#32 p4863 @zi_oper_38_o16_i32
+#33 p5011 @APB_SLAVE
+<8

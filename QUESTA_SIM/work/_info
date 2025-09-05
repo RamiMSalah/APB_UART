@@ -1,0 +1,34 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/Projects/Verilog/Projects/SPI_SPR_Async/Questa-sim_simulation
+vAPB_SLAVE
+!s110 1757076090
+!i10b 1
+!s100 LK;<dU2azRe;hkf5RlT^:0
+IgB0MeQVGEnVA:cMZNk8J12
+dE:/Projects/Verilog/Projects/APB_UART/QUESTA_SIM
+w1757076088
+8E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v
+FE:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v
+!i122 0
+L0 1 106
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2021.1;73
+r1
+!s85 0
+31
+!s108 1757076090.000000
+!s107 E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0
+n@a@p@b_@s@l@a@v@e

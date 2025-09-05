@@ -1,0 +1,4 @@
+CheckId@CheckName
+0@assign_width_overflow
+1@always_signal_assign_large
+2@seq_block_has_duplicate_assign

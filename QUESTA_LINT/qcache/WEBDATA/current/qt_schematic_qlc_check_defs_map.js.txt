@@ -1,0 +1,4 @@
+assign_width_overflow:off
+always_signal_assign_large:off
+seq_block_has_duplicate_assign:off
+
