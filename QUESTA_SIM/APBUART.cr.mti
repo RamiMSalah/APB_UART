@@ -1,1 +1,24 @@
+E:/Projects/Verilog/Projects/APB_UART/baudrate.v {1 {vlog -work work -vopt -stats=none E:/Projects/Verilog/Projects/APB_UART/baudrate.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module baudrate
 
+Top level modules:
+	baudrate
+
+} {} {}} E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v {1 {vlog -work work -vopt -stats=none E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module APB_SLAVE
+
+Top level modules:
+	APB_SLAVE
+
+} {} {}} E:/Projects/Verilog/Projects/APB_UART/UART_APB.v {1 {vlog -work work -vopt -stats=none E:/Projects/Verilog/Projects/APB_UART/UART_APB.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+
+} {} {}} E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v {0 {vlog -work work -vopt -stats=none E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module UART_RECIVER
+** Error: E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v(43): (vlog-2730) Undefined variable: 'default_case'.
+** Error: (vlog-13069) E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v(44): near "end": syntax error, unexpected end.
+
+} {4.0 6.0} {}}

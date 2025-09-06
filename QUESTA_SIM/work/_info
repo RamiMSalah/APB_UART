@@ -10,25 +10,70 @@ z2
 cModel Technology
 dE:/Projects/Verilog/Projects/SPI_SPR_Async/Questa-sim_simulation
 vAPB_SLAVE
-!s110 1757076090
+Z0 !s110 1757191651
 !i10b 1
-!s100 LK;<dU2azRe;hkf5RlT^:0
-IgB0MeQVGEnVA:cMZNk8J12
-dE:/Projects/Verilog/Projects/APB_UART/QUESTA_SIM
-w1757076088
+!s100 9z9QE]2aH<CZXN15=MoGL0
+IzEfgTlDOmKMNECJnACfV33
+Z1 dE:/Projects/Verilog/Projects/APB_UART/QUESTA_SIM
+w1757076868
 8E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v
 FE:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v
-!i122 0
-L0 1 106
-VDg1SIo80bB@j0V0VzS_@n1
-OL;L;2021.1;73
+!i122 35
+L0 1 115
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OL;L;2021.1;73
 r1
 !s85 0
 31
-!s108 1757076090.000000
+Z4 !s108 1757191651.000000
 !s107 E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v|
 !i113 0
-o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-tCvgOpt 0
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 tCvgOpt 0
 n@a@p@b_@s@l@a@v@e
+vbaudrate
+R0
+!i10b 1
+!s100 ]6T88aKilS05F`bQ1_;QU1
+ISe<E7A;:Q]cH[jBH`^bXV0
+R1
+w1757176328
+8E:/Projects/Verilog/Projects/APB_UART/baudrate.v
+FE:/Projects/Verilog/Projects/APB_UART/baudrate.v
+!i122 37
+L0 1 30
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/Projects/Verilog/Projects/APB_UART/baudrate.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/baudrate.v|
+!i113 0
+R5
+R6
+vUART_TRANSMITTER
+R0
+!i10b 1
+!s100 GOTFl36@?aGIKQ<e_m`H_3
+I?EJ^JNjV^WbC`K_5>CO>62
+R1
+w1757191647
+8E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v
+FE:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v
+!i122 36
+L0 1 140
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v|
+!i113 0
+R5
+R6
+n@u@a@r@t_@t@r@a@n@s@m@i@t@t@e@r
