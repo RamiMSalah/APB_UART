@@ -65,6 +65,10 @@
             end 
             else begin
                 case (cs)
+                //IDLE STATE
+                IDLE: begin
+                  done <= 1'b0;
+                end
                 //START STATE
                 START: begin
                     if(BCLK) begin
@@ -76,10 +80,8 @@
                 end
                 //DATA STATE
                 DATA: begin
-             if(counter == 7 && BCLK) begin
+             if(counter == width-1 && BCLK) begin
                     countdone <=1'b1;
-                    counter   <=1'b0;
-                    busy      <=1'b0;
                 end 
                 else begin
                     if(BCLK) begin
@@ -91,13 +93,17 @@
                 end
                 //DONE STATE
                 DONE: begin
+                    counter   <=0;
+                    busy    <= 1'b0;
                     tx_data <= 1'b1;
                     done    <= 1'b1;
+                    load    <= 1'b0;
                 end
                     default: begin
                    tx_data <= 1'b1;
                    busy    <= 1'b0;
                    done    <= 1'b0;
+                   load    <= 1'b0;
                     end
                 endcase
             end
@@ -122,7 +128,7 @@
             end
         end
         DATA: begin
-            if(~busy) begin
+            if(countdone) begin
               ns = DONE;
             end
         end

@@ -10,7 +10,7 @@ z2
 cModel Technology
 dE:/Projects/Verilog/Projects/SPI_SPR_Async/Questa-sim_simulation
 vAPB_SLAVE
-Z0 !s110 1757191651
+Z0 !s110 1757201025
 !i10b 1
 !s100 9z9QE]2aH<CZXN15=MoGL0
 IzEfgTlDOmKMNECJnACfV33
@@ -18,14 +18,14 @@ Z1 dE:/Projects/Verilog/Projects/APB_UART/QUESTA_SIM
 w1757076868
 8E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v
 FE:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v
-!i122 35
+!i122 61
 L0 1 115
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 OL;L;2021.1;73
 r1
 !s85 0
 31
-Z4 !s108 1757191651.000000
+Z4 !s108 1757201025.000000
 !s107 E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v|
 !i113 0
@@ -41,7 +41,7 @@ R1
 w1757176328
 8E:/Projects/Verilog/Projects/APB_UART/baudrate.v
 FE:/Projects/Verilog/Projects/APB_UART/baudrate.v
-!i122 37
+!i122 64
 L0 1 30
 R2
 R3
@@ -54,17 +54,40 @@ R4
 !i113 0
 R5
 R6
+vUART_RECIVER
+R0
+!i10b 1
+!s100 <WXd4Yj^6`YzKcL14J9SM2
+IgA0C7CMLN_Gni8>VAek851
+R1
+w1757200984
+8E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v
+FE:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v
+!i122 62
+L0 1 133
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v|
+!i113 0
+R5
+R6
+n@u@a@r@t_@r@e@c@i@v@e@r
 vUART_TRANSMITTER
 R0
 !i10b 1
-!s100 GOTFl36@?aGIKQ<e_m`H_3
-I?EJ^JNjV^WbC`K_5>CO>62
+!s100 Xc0A8SE0<RG6;8iEHb5HC0
+IOkTLJ4;S:2jLmSkG8J?N;3
 R1
-w1757191647
+w1757200873
 8E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v
 FE:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v
-!i122 36
-L0 1 140
+!i122 63
+L0 1 146
 R2
 R3
 r1
