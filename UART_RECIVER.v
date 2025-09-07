@@ -105,7 +105,7 @@ end
         ns = cs;
         case (cs)
         IDLE: begin
-        if(rx_en) begin
+        if(rx_en &&rx_data) begin
             ns = START;
         end
         end

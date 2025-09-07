@@ -8,13 +8,27 @@ parameter ACCESS    = 2'b10
 )(
 input  [Width-1:0] PADDR                      ,
 input  [Width-1:0] PWDATA                     ,
+input tx_busy                                 ,
+input tx_done                                 ,
+input rx_busy                                 ,
+input rx_done                                 ,
+input [7:0] rx_data                           ,
+
+//APB SLAVE -----> UART
+
+
 input PCLK                                    ,
 input PRESETn                                 ,
 input PSEL                                    ,
 input PENABLE                                 ,
 input PWRITE                                  ,
 output  reg [Width-1:0]   PRDATA              ,
-output reg   PREADY
+output reg   PREADY                           ,
+output rx_en                                  ,
+output rx_rst                                 ,
+output tx_en                                  ,
+output tx_rst                                 ,
+output [7:0] tx_data                           
 );
 
 reg [Width2-1:0] cs                           ;
@@ -110,6 +124,34 @@ always @(*) begin
     default:PREADY = 1'b0;
   endcase
 end
+    assign rx_en = CTRL_REG[0] ;
+    assign rx_rst = CTRL_REG[1] ;
+    assign tx_rst = CTRL_REG[2] ;
+    assign tx_en = CTRL_REG[3] ;
 
+//TX_REG SIGNALS
+    assign tx_data = TX_DATA ;
+
+//STATS_REG SIGNALS
+always @(posedge PCLK or negedge PRESETn) begin
+    if (~PRESETn)
+        STATS_REG <= 0 ;
+    else begin
+        STATS_REG[0] <= tx_busy ;
+        STATS_REG[1] <= tx_done ;
+        STATS_REG[2] <= rx_busy ;
+        STATS_REG[3] <= rx_done ;
+        STATS_REG[31:4] <= 0 ;
+    end
+end
+
+//RX_REG SIGNALS
+always @(posedge PCLK or negedge PRESETn) begin
+    if(~PRESETn)
+        RX_DATA <= 0 ;
+    else if(rx_done) begin
+        RX_DATA[7:0] <= rx_data ;
+    end
+end
 
 endmodule 

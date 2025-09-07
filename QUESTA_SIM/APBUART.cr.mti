@@ -1,4 +1,11 @@
-E:/Projects/Verilog/Projects/APB_UART/baudrate.v {1 {vlog -work work -vopt -stats=none E:/Projects/Verilog/Projects/APB_UART/baudrate.v
+E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v {1 {vlog -work work -vopt -stats=none E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module UART_TRANSMITTER
+
+Top level modules:
+	UART_TRANSMITTER
+
+} {} {}} E:/Projects/Verilog/Projects/APB_UART/baudrate.v {1 {vlog -work work -vopt -stats=none E:/Projects/Verilog/Projects/APB_UART/baudrate.v
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 -- Compiling module baudrate
 
@@ -14,5 +21,16 @@ Top level modules:
 
 } {} {}} E:/Projects/Verilog/Projects/APB_UART/UART_APB.v {1 {vlog -work work -vopt -stats=none E:/Projects/Verilog/Projects/APB_UART/UART_APB.v
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module UART_APB_TOP
+
+Top level modules:
+	UART_APB_TOP
+
+} {} {}} E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v {1 {vlog -work work -vopt -stats=none E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module UART_RECIVER
+
+Top level modules:
+	UART_RECIVER
 
 } {} {}}
