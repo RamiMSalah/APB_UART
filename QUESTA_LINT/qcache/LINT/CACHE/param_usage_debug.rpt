@@ -1,4 +1,4 @@
-m_allSignalsCdcSignals : 1 , m_preferCdcSignalReporting : 0, m_topModule : APB_SLAVE
+m_allSignalsCdcSignals : 1 , m_preferCdcSignalReporting : 0, m_topModule : UART_APB_TOP
 
-Module : APB_SLAVE
+Module : UART_APB_TOP
 

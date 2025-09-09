@@ -1,128 +1,82 @@
-`timescale 1ns/1ps
-
-module UART_APB_tb;
-
-    parameter WIDTH = 32;
-    parameter BAUD_DELAY = 1_100_000; // ≈ 1.1 ms @ 1ns timescale (10 bits @ 9600 baud)
-
-    // APB signals
-    reg  PSEL;
-    reg  PENABLE;
-    reg  [WIDTH-1:0] PADDR;
-    reg  PWRITE;
-    reg  [WIDTH-1:0] PWDATA;
+module UART_tb();
+parameter WIDTH = 32;
     reg  PCLK;
     reg  PRESETn;
-    wire [WIDTH-1:0] PRDATA;
-    wire PREADY;
+    reg tx_en;
+    reg [7:0] tx_data;
+    reg tx_rst;
+    reg rx_rst;
+    reg rx_en;
+    wire        tx_busy; 
+    wire bit_sent;
+    wire tx_done;
+    wire        rx_busy;
+    wire  rx_done;
+    wire [7:0]  rx_data;
+FULL_UART #(
+) DUT(
+.PCLK(PCLK),
+.PRESETn(PRESETn),
+.tx_en(tx_en),
+.tx_data(tx_data),
+.tx_rst(tx_rst),
+.rx_rst(rx_rst),
+.rx_en(rx_en),
+.tx_busy(tx_busy),
+.tx_done(tx_done),
+.rx_busy(rx_busy),
+.rx_done(rx_done),
+.rx_data(rx_data)
+);
 
-    // DUT instance
-    UART_APB_TOP dut (
-        .PCLK(PCLK),
-        .PRESETn(PRESETn),
-        .PSEL(PSEL),
-        .PENABLE(PENABLE),
-        .PWRITE(PWRITE),
-        .PADDR(PADDR),
-        .PWDATA(PWDATA),
-        .PRDATA(PRDATA),
-        .PREADY(PREADY)
-    );
 
-    // Clock generation (100 MHz)
-    initial begin
-        PCLK = 0;
-        forever #5 PCLK = ~PCLK;
+initial begin
+    PCLK = 0;
+    forever begin
+        PCLK = ~PCLK;
+        #1;
     end
+end
 
-    // FSM monitoring
-    // FSM monitoring with baud pulses
-    initial begin
-        $display("time\tAPB_CS\tTX_CS\tRX_CS\ttx_busy\trx_busy\ttx_data\trx_out");
-        forever begin
-            @(posedge dut.BCLK);   // اتأكد إن اسم الإشارة هو نفسه اللي عندك في التوب
-            $display("%0t\t%b\t%b\t%b\t%b\t%b\t%b\t%h",
-                $time,
-                dut.apb.cs,
-                dut.uart_tx.cs,
-                dut.uart_rx.cs,
-                dut.uart_tx.busy,
-                dut.uart_rx.busy,
-                dut.uart_tx.tx_data,
-                dut.uart_rx.out
-            );
-        end
-    end
+initial begin
+    PRESETn = 0;
+    tx_rst  = 1;
+    rx_rst  = 1;
+    tx_data = 0;
+    @(negedge PCLK);
+    @(negedge PCLK);
+    PRESETn = 1;
+    tx_rst  = 0;
+    rx_rst  = 0;
+    rx_en  = 1;
+    tx_data = 8'b10110011;
+    tx_en = 1;
+    @(negedge PCLK);
 
-    // Stimulus
-    initial begin
-        PRESETn = 0;
-        PSEL    = 0;
-        PENABLE = 0;
-        PWRITE  = 0;
-        PADDR   = 0;
-        PWDATA  = 0;
+    repeat (10417 * 15) @(negedge PCLK);
+$display("++++++++++++++++++");
+    tx_en  = 0;
+    rx_en  = 0;
+    $display("YOUR DATA SENT IS %b",DUT.uart_tx.data);
+    $display("YOUR DATA REGISTERED IS %b",DUT.uart_rx.rx_register);
+    $display("YOUR DATA RECIVED IS %b",DUT.uart_rx.out);
+    $stop;
+end
 
-        // Apply reset
-        #200 PRESETn = 1;
-
-        // =====================================================
-        // Step 1: Write CTRL_REG (0x0000) to enable TX & RX
-        // =====================================================
-        @(posedge PCLK);
-        PSEL   <= 1;
-        PWRITE <= 1;
-        PADDR  <= 32'h0000;
-        PWDATA <= 32'h00000009;   // tx_en=1, rx_en=1
-
-        @(posedge PCLK);
-        PENABLE <= 1;
-
-        @(posedge PCLK);
-        PSEL    <= 0;
-        PENABLE <= 0;
-
-        // انتظر وقت كافي لبداية الـ FSM
-        #(BAUD_DELAY);
-
-        // =====================================================
-        // Step 2: Write TX_DATA (0x0002) to send data
-        // =====================================================
-        @(posedge PCLK);
-        PSEL   <= 1;
-        PWRITE <= 1;
-        PADDR  <= 32'h0002;
-        PWDATA <= 32'h000000A0;
-
-        @(posedge PCLK);
-        PENABLE <= 1;
-
-        @(posedge PCLK);
-        PSEL    <= 0;
-        PENABLE <= 0;
-
-        // انتظر وقت كافي لإرسال باكيت كامل
-        #(BAUD_DELAY);
-
-        // =====================================================
-        // Step 3: Read RX_DATA (0x0003)
-        // =====================================================
-        @(posedge PCLK);
-        PSEL   <= 1;
-        PWRITE <= 0;
-        PADDR  <= 32'h0003;
-
-        @(posedge PCLK);
-
-        PENABLE <= 1;
-        @(posedge PCLK);
-        @(posedge PCLK);
-        #(BAUD_DELAY);
-        $display("Current State:",dut.apb.cs);
-        $display("RX_DATA = %h", PRDATA);
+initial begin
+    forever begin
+        @(posedge DUT.BCLK);
+         
+$display("|TX_Enable: %b |,|TX_Data: %b |,|TX_RST: %b|,|TX_Busy: %b|,|TX_Done: %b|,|Current State of TRA: %b|, |Counter: %d|, |BIT SENT: %b| ",
+DUT.uart_tx.tx_en,DUT.uart_tx.data,DUT.uart_tx.rst,DUT.uart_tx.busy,DUT.uart_tx.done,DUT.uart_tx.cs,DUT.uart_tx.counter,DUT.uart_tx.tx_data);
 
 
-        $finish;
-    end
+/*
+            $display("|RX_Enable: %b |,|RX_Data: %b |,|RX_RST: %b|,|RX_Busy: %b|,|RX_Done: %b|, |Counter: %d|, |BIT RECIVED: %b| ",
+DUT.uart_rx.rx_en,DUT.uart_rx.out,DUT.uart_rx.rst,DUT.uart_rx.busy,DUT.uart_rx.done,DUT.uart_rx.counter,DUT.uart_rx.rx_data);
 
+*/
+end
+end
+ 
 endmodule

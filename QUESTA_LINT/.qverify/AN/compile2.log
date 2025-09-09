@@ -1,2 +1,9 @@
-** Warning: (vlib-34) Library already exists at "work".
-Errors: 0, Warnings: 1
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+Start time: 15:57:05 on Sep 07,2025
+vlog E:/Projects/Verilog/Projects/APB_UART/baudrate.v -work work 
+-- Compiling module baudrate
+
+Top level modules:
+	baudrate
+End time: 15:57:05 on Sep 07,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

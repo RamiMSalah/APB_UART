@@ -2,11 +2,11 @@
 Lint Check Report
 Questa Lint  Version 2021.1 4558100 win64 28-Jan-2021
 
-Timestamp            : Fri Sep  5 15:50:17 2025
+Timestamp            : Sun Sep  7 15:58:50 2025
 Description          : Report for referring checks count, check violations details, and  design information
-Design               : APB_SLAVE
+Design               : UART_APB_TOP
 Database             : E:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT/lint.db
-Design Quality Score : 99.1%
+Design Quality Score : 98.4%
 
 Sections:
    Section 1 : Check Summary
@@ -19,19 +19,28 @@ Sections:
 Section 1 : Check Summary
 ====================================================================================================
 -------------
-| Error (0) |
+| Error (4) |
 -------------
-
----------------
-| Warning (1) |
----------------
-  seq_block_has_duplicate_assign          : 1
-
-------------
-| Info (2) |
-------------
   assign_width_overflow                   : 1
-  always_signal_assign_large              : 1
+  empty_block                             : 1
+  multi_driven_signal                     : 2
+
+----------------
+| Warning (10) |
+----------------
+  always_has_inconsistent_async_control   : 2
+  bus_bits_not_read                       : 5
+  always_signal_assign_large              : 3
+
+-------------
+| Info (16) |
+-------------
+  fsm_without_one_hot_encoding            : 3
+  if_else_if_can_be_case                  : 1
+  parameter_name_duplicate                : 6
+  reserved_keyword                        : 4
+  unloaded_input_port                     : 1
+  comment_not_in_english                  : 1
 
 ----------------
 | Resolved (0) |
@@ -42,35 +51,126 @@ Section 1 : Check Summary
 Section 2 : Check Details
 ====================================================================================================
 -------------
-| Error (0) |
+| Error (4) |
 -------------
-
-
----------------
-| Warning (1) |
----------------
-
-Check: seq_block_has_duplicate_assign [Category: Rtl Design Style] (1)
-       [Message: Signal is assigned more than once in a sequential block. Signal '<signal>', Module '<module>', File '<file>', Total Assigns Count '<count>', First Assign at Line '<line1>', Second Assign at Line '<line2>'.]
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-seq_block_has_duplicate_assign: [uninspected] Signal is assigned more than once in a sequential block. Signal 'PRDATA', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Total Assigns Count '2', First Assign at Line '59', Second Assign at Line '62'.
-
-
-
-------------
-| Info (2) |
-------------
 
 Check: assign_width_overflow [Category: Rtl Design Style] (1)
        [Message: Width of assignment RHS is greater than width of LHS.  LHS Expression '<lhs_expression>', LHS Width '<lhs_width>', RHS Width '<rhs_width>', Module '<module>', File '<file>', Line '<line>'.]
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-assign_width_overflow: [uninspected] Width of assignment RHS is greater than width of LHS.  LHS Expression 'PRDATA', LHS Width '32', RHS Width '56', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '65'. [RTL ID:b2cfba92_00200]
+assign_width_overflow: [uninspected] Width of assignment RHS is greater than width of LHS.  LHS Expression 'tx_data', LHS Width '8', RHS Width '32', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '133'. [RTL ID:e95ef272_00200]
 
 
-Check: always_signal_assign_large [Category: Rtl Design Style] (1)
+Check: empty_block [Category: Rtl Design Style] (1)
+       [Message: Block has no statement. Module '<module>', File '<file>', Line '<line>'.]
+-------------------------------------------------------------------------------------------
+empty_block: [uninspected] Block has no statement. Module 'UART_RECIVER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v', Line '68'.
+
+
+Check: multi_driven_signal [Category: Simulation] (2)
+       [Message: Net has multiple drivers. Signal '<signal>', Module '<module>', File '<file>', Line '<line>'.]
+----------------------------------------------------------------------------------------------------------------
+multi_driven_signal: [uninspected] Net has multiple drivers. Signal 'STATS_REG', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '54'.
+
+multi_driven_signal: [uninspected] Net has multiple drivers. Signal 'RX_DATA', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '56'.
+
+
+
+----------------
+| Warning (10) |
+----------------
+
+Check: always_has_inconsistent_async_control [Category: Reset] (2)
+       [Message: Always block has assignment(s) with inconsistent asynchronous control signal. Always block: Module '<module>', File '<file>', Line '<line>', First inconsistent pair: Asynchronous flop '<flop1>', Line '<line1>', Synchronous flop '<flop2>', Line '<line2>'.]
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+always_has_inconsistent_async_control: [uninspected] Always block has assignment(s) with inconsistent asynchronous control signal. Always block: Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '51', First inconsistent pair: Asynchronous flop 'CTRL_REG', Line '53', Synchronous flop 'PRDATA', Line '73'.
+
+always_has_inconsistent_async_control: [uninspected] Always block has assignment(s) with inconsistent asynchronous control signal. Always block: Module 'UART_TRANSMITTER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v', Line '52', First inconsistent pair: Asynchronous flop 'countdone', Line '54', Synchronous flop 'tx_data', Line '88'.
+
+
+Check: bus_bits_not_read [Category: Rtl Design Style] (5)
+       [Message: Bus has one or more bits that are not read. Bus unread bits '<bits>', Module '<module>', File '<file>', Line '<line>'.]
+-----------------------------------------------------------------------------------------------------------------------------------------
+bus_bits_not_read: [uninspected] Bus has one or more bits that are not read. Bus unread bits 'CTRL_REG[31:4]', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '36'.
+
+bus_bits_not_read: [uninspected] Bus has one or more bits that are not read. Bus unread bits 'STATS_REG[31:5]', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '37'.
+
+bus_bits_not_read: [uninspected] Bus has one or more bits that are not read. Bus unread bits 'RX_DATA[31:8]', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '39'.
+
+bus_bits_not_read: [uninspected] Bus has one or more bits that are not read. Bus unread bits 'BAUDIV[31:16]', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '40'.
+
+bus_bits_not_read: [uninspected] Bus has one or more bits that are not read. Bus unread bits '{rx_register[0], rx_register[9]}', Module 'UART_RECIVER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v', Line '24'.
+
+
+Check: always_signal_assign_large [Category: Rtl Design Style] (3)
        [Message: Always block has more signal assignments than the specified limit. Total count '<count>', Specified limit '<limit>', Module '<module>', File '<file>', Line '<line>'.]
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-always_signal_assign_large: [uninspected] Always block has more signal assignments than the specified limit. Total count '6', Specified limit '5', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '37'.
+always_signal_assign_large: [uninspected] Always block has more signal assignments than the specified limit. Total count '6', Specified limit '5', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '51'.
+
+always_signal_assign_large: [uninspected] Always block has more signal assignments than the specified limit. Total count '6', Specified limit '5', Module 'UART_RECIVER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v', Line '50'.
+
+always_signal_assign_large: [uninspected] Always block has more signal assignments than the specified limit. Total count '7', Specified limit '5', Module 'UART_TRANSMITTER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v', Line '52'.
+
+
+
+-------------
+| Info (16) |
+-------------
+
+Check: fsm_without_one_hot_encoding [Category: Rtl Design Style] (3)
+       [Message: FSM encoding is not one-hot. Module '<module>', File '<file>', Line '<line>'.]
+------------------------------------------------------------------------------------------------
+fsm_without_one_hot_encoding: [uninspected] FSM encoding is not one-hot. Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '96'. [RTL ID:7389c170_00200]
+
+fsm_without_one_hot_encoding: [uninspected] FSM encoding is not one-hot. Module 'UART_RECIVER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v', Line '107'. [RTL ID:f13b00c1_00200]
+
+fsm_without_one_hot_encoding: [uninspected] FSM encoding is not one-hot. Module 'UART_TRANSMITTER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v', Line '120'. [RTL ID:f13b00c1_00200]
+
+
+Check: if_else_if_can_be_case [Category: Rtl Design Style] (1)
+       [Message: 'Long if, else if, else chain is modeled better with case statement.  Module '<module>', File '<file>', Line '<line>' .]
+------------------------------------------------------------------------------------------------------------------------------------------
+if_else_if_can_be_case: [uninspected] 'Long if, else if, else chain is modeled better with case statement.  Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '72' . [RTL ID:f8d25718_00200]
+
+
+Check: parameter_name_duplicate [Category: Nomenclature Style] (6)
+       [Message: Same parameter name is used in more than one module. Parameter '<parameter>', Total count '<count>', First module: Module '<module1>', File '<file1>', Line '<line1>', Second module: Module '<module2>', File '<file2>', Line '<line2>']
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+parameter_name_duplicate: [uninspected] Same parameter name is used in more than one module. Parameter 'IDLE', Total count '3', First module: Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '5', Second module: Module 'UART_RECIVER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v', Line '5'
+
+parameter_name_duplicate: [uninspected] Same parameter name is used in more than one module. Parameter 'width', Total count '2', First module: Module 'UART_RECIVER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v', Line '3', Second module: Module 'UART_TRANSMITTER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v', Line '3'
+
+parameter_name_duplicate: [uninspected] Same parameter name is used in more than one module. Parameter 'width2', Total count '2', First module: Module 'UART_RECIVER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v', Line '4', Second module: Module 'UART_TRANSMITTER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v', Line '4'
+
+parameter_name_duplicate: [uninspected] Same parameter name is used in more than one module. Parameter 'START', Total count '2', First module: Module 'UART_RECIVER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v', Line '6', Second module: Module 'UART_TRANSMITTER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v', Line '6'
+
+parameter_name_duplicate: [uninspected] Same parameter name is used in more than one module. Parameter 'DATA', Total count '2', First module: Module 'UART_RECIVER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v', Line '7', Second module: Module 'UART_TRANSMITTER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v', Line '7'
+
+parameter_name_duplicate: [uninspected] Same parameter name is used in more than one module. Parameter 'DONE', Total count '2', First module: Module 'UART_RECIVER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v', Line '8', Second module: Module 'UART_TRANSMITTER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v', Line '8'
+
+
+Check: reserved_keyword [Category: Nomenclature Style] (4)
+       [Message: Name of the design element matches a reserved keyword. Name '<name>', Reason '<reason>', Module '<module>', File '<file>', Line '<line>'.]
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+reserved_keyword: [uninspected] Name of the design element matches a reserved keyword. Name 'SETUP', Reason 'SDF or EDIF keyword', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '6'.
+
+reserved_keyword: [uninspected] Name of the design element matches a reserved keyword. Name 'ACCESS', Reason 'VHDL keyword', Module 'APB_SLAVE', File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line '7'.
+
+reserved_keyword: [uninspected] Name of the design element matches a reserved keyword. Name 'out', Reason 'VHDL keyword', Module 'UART_RECIVER', File 'E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v', Line '19'.
+
+reserved_keyword: [uninspected] Name of the design element matches a reserved keyword. Name 'FINAL', Reason 'Case variant of verilog keyword', Module 'baudrate', File 'E:/Projects/Verilog/Projects/APB_UART/baudrate.v', Line '5'.
+
+
+Check: unloaded_input_port [Category: Connectivity] (1)
+       [Message: Module input drives no logic. Port '<port>', Module '<module>', File '<file>', Line '<line>'.]
+----------------------------------------------------------------------------------------------------------------
+unloaded_input_port: [uninspected] Module input drives no logic. Port 'RX', Module 'UART_APB_TOP', File 'E:/Projects/Verilog/Projects/APB_UART/UART_APB.v', Line '4'.
+
+
+Check: comment_not_in_english [Category: Nomenclature Style] (1)
+       [Message: Comments include non-English characters. File '<file>', Line '<line>'.]
+-----------------------------------------------------------------------------------------
+comment_not_in_english: [uninspected] Comments include non-English characters. File 'E:/Projects/Verilog/Projects/APB_UART/UART_APB.v', Line '27'.
+    2 more occurrences at: line 81 and line 93.
 
 
 
@@ -86,7 +186,7 @@ Section 3 : Design Information
 -----------
 | Summary |
 -----------
-  Register Bits                           : 194
+  Register Bits                           : 327
   Latch Bits                              : 0
   User-specified Blackboxes               : 0
   Inferred Blackboxes                     : 0

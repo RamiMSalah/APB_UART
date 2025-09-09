@@ -20,7 +20,7 @@ C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/bin/qverifyek
 
 Command: qlc_status_update
 Command Arguments:
-    -zdb E:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT/qcache/DB/zdb_2
+    -zdb E:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT/qcache/DB/zdb_6
     -db E:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT/lint.db
 
 Questa Debug flags:

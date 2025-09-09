@@ -42,6 +42,139 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -51,10 +184,10 @@ R0
 cModel Technology
 Z1 dE:/Projects/Verilog/Projects/SPI_SPR_Async/Questa-sim_simulation
 T_opt
-!s110 1757204302
-V]c4b[:gg]TM8TWaCAo;9Y1
-04 11 4 work UART_TOP_TB fast 0
-=1-70d823a708cd-68bccf4e-1e4-5a14
+!s110 1757262690
+VEo1DTi?n;benSfKc1B1[22
+04 11 4 work APB_UART_tb fast 0
+=1-ac91a11d2b35-68bdb361-388-6208
 Z2 !s124 OEM100
 Z3 o-quiet -auto_acc_if_foreign -work work +acc
 Z4 tCvgOpt 0
@@ -62,28 +195,28 @@ n@_opt
 Z5 OL;O;2021.1;73
 R1
 T_opt1
-!s110 1757204932
-V0DIdGAa4Jdcke`_h74j490
-04 11 4 work tb_uart_apb fast 0
-=1-70d823a708cd-68bcd1c4-2aa-2b00
+!s110 1757438633
+Vbg2GENXD7_[0BVLR=oLIE0
+04 7 4 work UART_tb fast 0
+=1-ac91a11d2b35-68c062a8-34b-1a50
 R2
 R3
 R4
 n@_opt1
 R5
-R1
 T_opt2
-!s110 1757213041
-VNGE>3Gi2m6M^c:kEUfkKf3
-04 11 4 work UART_APB_tb fast 0
-=1-ac91a11d2b35-68bcf171-2c4-44f4
+!s110 1757343317
+V=IcgEk40oeeEaAFBi>34g1
+04 8 4 work UART_TOP fast 0
+=1-ac91a11d2b35-68beee55-4c-3030
 R2
-R3
+o-quiet -auto_acc_if_foreign -work work
 R4
 n@_opt2
 R5
+R1
 vAPB_SLAVE
-Z6 !s110 1757213038
+Z6 !s110 1757438626
 !i10b 1
 !s100 `UVS?WIB_R4=@kHk=DCC63
 IkXTQ67X9K@H[^AKFWh@Ld3
@@ -91,20 +224,43 @@ Z7 dE:/Projects/Verilog/Projects/APB_UART/QUESTA_SIM
 w1757203630
 8E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v
 FE:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v
-!i122 416
+!i122 1606
 L0 1 157
 Z8 VDg1SIo80bB@j0V0VzS_@n1
 Z9 OL;L;2021.1;73
 r1
 !s85 0
 31
-Z10 !s108 1757213038.000000
+Z10 !s108 1757438626.000000
 !s107 E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v|
 !i113 0
 Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R4
 n@a@p@b_@s@l@a@v@e
+vAPB_UART_tb
+!s110 1757337569
+!i10b 1
+!s100 P8M684Wa70>ZZ=XnehRi72
+I;AZA^9d`Y3R1lmgidR4IG1
+R7
+w1757337568
+Z12 8E:/Projects/Verilog/Projects/APB_UART/UART_APB_tb.v
+Z13 FE:/Projects/Verilog/Projects/APB_UART/UART_APB_tb.v
+!i122 1021
+L0 1 60
+R8
+R9
+r1
+!s85 0
+31
+!s108 1757337569.000000
+Z14 !s107 E:/Projects/Verilog/Projects/APB_UART/UART_APB_tb.v|
+Z15 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/UART_APB_tb.v|
+!i113 0
+R11
+R4
+n@a@p@b_@u@a@r@t_tb
 vbaudrate
 R6
 !i10b 1
@@ -114,7 +270,7 @@ R7
 w1757176328
 8E:/Projects/Verilog/Projects/APB_UART/baudrate.v
 FE:/Projects/Verilog/Projects/APB_UART/baudrate.v
-!i122 420
+!i122 1610
 L0 1 30
 R8
 R9
@@ -127,25 +283,71 @@ R10
 !i113 0
 R11
 R4
+vFULL_UART
+Z16 !s110 1757438627
+!i10b 1
+!s100 4fUj`7ECU1QSRT=D7z3DD2
+I@TU6bHKjW8J60WJb1TIEC2
+R7
+w1757438233
+8E:/Projects/Verilog/Projects/APB_UART/FULL_UART.v
+FE:/Projects/Verilog/Projects/APB_UART/FULL_UART.v
+!i122 1612
+L0 1 52
+R8
+R9
+r1
+!s85 0
+31
+Z17 !s108 1757438627.000000
+!s107 E:/Projects/Verilog/Projects/APB_UART/FULL_UART.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/FULL_UART.v|
+!i113 0
+R11
+R4
+n@f@u@l@l_@u@a@r@t
+vRECIVER
+!s110 1757367122
+!i10b 1
+!s100 DN>m8=9Wc8CCfKe`gO3?j0
+IiWBX<THoCNi_HUIJXNV<U0
+R7
+w1757367118
+Z18 8E:/Projects/Verilog/Projects/APB_UART/RECIVER.v
+Z19 FE:/Projects/Verilog/Projects/APB_UART/RECIVER.v
+!i122 1573
+Z20 L0 1 87
+R8
+R9
+r1
+!s85 0
+31
+!s108 1757367122.000000
+Z21 !s107 E:/Projects/Verilog/Projects/APB_UART/RECIVER.v|
+Z22 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/RECIVER.v|
+!i113 0
+R11
+R4
+n@r@e@c@i@v@e@r
 vUART_APB_tb
-R6
+!s110 1757252444
 !i10b 1
 !s100 D[j@>l43_8kP61?Q6?RNF0
 IcIb`=MkiUAO]cm:[XT7><2
 R7
 w1757213028
-Z12 8E:/Projects/Verilog/Projects/APB_UART/UART_APB_tb.v
-Z13 FE:/Projects/Verilog/Projects/APB_UART/UART_APB_tb.v
-!i122 421
+R12
+R13
+!i122 463
 L0 3 126
 R8
 R9
 r1
 !s85 0
 31
-R10
-Z14 !s107 E:/Projects/Verilog/Projects/APB_UART/UART_APB_tb.v|
-Z15 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/UART_APB_tb.v|
+!s108 1757252444.000000
+R14
+R15
 !i113 0
 R11
 R4
@@ -153,37 +355,60 @@ n@u@a@r@t_@a@p@b_tb
 vUART_APB_TOP
 R6
 !i10b 1
-!s100 6m^1z8d62z>Z?Fobd>Hhm0
-ID3d^Kk2cB;FXjPAO0kjd^3
+!s100 cLl8jj7T8N2lnW:BXXKBW1
+I6J;Nj?;lHL7RCH7WB^2Sh1
 R7
-w1757212987
-Z16 8E:/Projects/Verilog/Projects/APB_UART/UART_APB.v
-Z17 FE:/Projects/Verilog/Projects/APB_UART/UART_APB.v
-!i122 417
-L0 1 99
+w1757252540
+Z23 8E:/Projects/Verilog/Projects/APB_UART/UART_APB.v
+Z24 FE:/Projects/Verilog/Projects/APB_UART/UART_APB.v
+!i122 1607
+L0 1 97
 R8
 R9
 r1
 !s85 0
 31
 R10
-Z18 !s107 E:/Projects/Verilog/Projects/APB_UART/UART_APB.v|
-Z19 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/UART_APB.v|
+Z25 !s107 E:/Projects/Verilog/Projects/APB_UART/UART_APB.v|
+Z26 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Projects/Verilog/Projects/APB_UART/UART_APB.v|
 !i113 0
 R11
 R4
 n@u@a@r@t_@a@p@b_@t@o@p
 vUART_RECIVER
+R16
+!i10b 1
+!s100 kIEfe^aln_aH`lZc7foCL3
+I30L28APS<X7==aS>kMT[[3
+R7
+w1757438152
+R18
+R19
+!i122 1613
+L0 1 151
+R8
+R9
+r1
+!s85 0
+31
+R17
+R21
+R22
+!i113 0
+R11
+R4
+n@u@a@r@t_@r@e@c@i@v@e@r
+vUART_RECIVERt
 R6
 !i10b 1
-!s100 KaXYI7_Dmi<Ra3?lA@diG2
-IX33QMRD7z[?ZhMRz:=Mo;3
+!s100 HbiXTJVDXR7h]aQ0UI>a62
+IjB;]:;XimhR5SlKICJLC52
 R7
-w1757210482
+w1757438475
 8E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v
 FE:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v
-!i122 418
-L0 1 133
+!i122 1608
+L0 1 143
 R8
 R9
 r1
@@ -195,7 +420,30 @@ R10
 !i113 0
 R11
 R4
-n@u@a@r@t_@r@e@c@i@v@e@r
+n@u@a@r@t_@r@e@c@i@v@e@rt
+vUART_tb
+R16
+!i10b 1
+!s100 UmNGaFHiH5UZ0k7<c=e`N1
+IE[W?ZFM>MIS`;LjE[RhbG3
+R7
+w1757438621
+R12
+R13
+!i122 1611
+L0 1 82
+R8
+R9
+r1
+!s85 0
+31
+R17
+R14
+R15
+!i113 0
+R11
+R4
+n@u@a@r@t_tb
 vUART_TOP
 !s110 1757204290
 !i10b 1
@@ -203,56 +451,33 @@ vUART_TOP
 IfdBUXN0>U^]OQQa3ZGd]D2
 R7
 w1757204130
-R16
-R17
+R23
+R24
 !i122 78
-L0 1 87
+R20
 R8
 R9
 r1
 !s85 0
 31
 !s108 1757204290.000000
-R18
-R19
+R25
+R26
 !i113 0
 R11
 R4
 n@u@a@r@t_@t@o@p
-vUART_TOP_TB
-!s110 1757204291
-!i10b 1
-!s100 Vh]:TIIXBzG1GmgR7Cz251
-Ih>@HXK[]Zch1I_M4Y[VIf1
-R7
-w1757204234
-R12
-R13
-!i122 82
-L0 3 110
-R8
-R9
-r1
-!s85 0
-31
-!s108 1757204291.000000
-R14
-R15
-!i113 0
-R11
-R4
-n@u@a@r@t_@t@o@p_@t@b
 vUART_TRANSMITTER
 R6
 !i10b 1
-!s100 Xc0A8SE0<RG6;8iEHb5HC0
-IOkTLJ4;S:2jLmSkG8J?N;3
+!s100 ilLPYnc=F6nV2Q3nBi9S10
+I3NSg:?hNXHFnTG@<higHL2
 R7
-w1757200873
+w1757438551
 8E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v
 FE:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v
-!i122 419
-L0 1 146
+!i122 1609
+L0 1 128
 R8
 R9
 r1

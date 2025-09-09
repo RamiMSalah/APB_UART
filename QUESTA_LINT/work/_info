@@ -1,0 +1,125 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT
+vAPB_SLAVE
+!s110 1757249824
+!i10b 1
+!s100 `UVS?WIB_R4=@kHk=DCC63
+IkXTQ67X9K@H[^AKFWh@Ld3
+R0
+w1757203630
+8E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v
+FE:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v
+!i122 0
+L0 1 157
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 OL;L;2021.1;73
+r1
+!s85 0
+31
+!s108 1757249824.000000
+!s107 E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v|
+!s90 E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v|-work|work|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z4 tCvgOpt 0
+n@a@p@b_@s@l@a@v@e
+vbaudrate
+Z5 !s110 1757249825
+!i10b 1
+!s100 ]6T88aKilS05F`bQ1_;QU1
+ISe<E7A;:Q]cH[jBH`^bXV0
+R0
+w1757176328
+8E:/Projects/Verilog/Projects/APB_UART/baudrate.v
+FE:/Projects/Verilog/Projects/APB_UART/baudrate.v
+!i122 1
+L0 1 30
+R1
+R2
+r1
+!s85 0
+31
+Z6 !s108 1757249825.000000
+!s107 E:/Projects/Verilog/Projects/APB_UART/baudrate.v|
+!s90 E:/Projects/Verilog/Projects/APB_UART/baudrate.v|-work|work|
+!i113 0
+R3
+R4
+vUART_APB_TOP
+R5
+!i10b 1
+!s100 6m^1z8d62z>Z?Fobd>Hhm0
+ID3d^Kk2cB;FXjPAO0kjd^3
+R0
+w1757212987
+8E:/Projects/Verilog/Projects/APB_UART/UART_APB.v
+FE:/Projects/Verilog/Projects/APB_UART/UART_APB.v
+!i122 2
+L0 1 99
+R1
+R2
+r1
+!s85 0
+31
+R6
+!s107 E:/Projects/Verilog/Projects/APB_UART/UART_APB.v|
+!s90 E:/Projects/Verilog/Projects/APB_UART/UART_APB.v|-work|work|
+!i113 0
+R3
+R4
+n@u@a@r@t_@a@p@b_@t@o@p
+vUART_RECIVER
+R5
+!i10b 1
+!s100 3MT37L4<lZo<@Q`YZe;ZJ1
+Ikc@BWL0JLZ7VdEeCXL__]0
+R0
+w1757213389
+8E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v
+FE:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v
+!i122 3
+L0 1 133
+R1
+R2
+r1
+!s85 0
+31
+R6
+!s107 E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v|
+!s90 E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v|-work|work|
+!i113 0
+R3
+R4
+n@u@a@r@t_@r@e@c@i@v@e@r
+vUART_TRANSMITTER
+R5
+!i10b 1
+!s100 Xc0A8SE0<RG6;8iEHb5HC0
+IOkTLJ4;S:2jLmSkG8J?N;3
+R0
+w1757200873
+8E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v
+FE:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v
+!i122 4
+L0 1 146
+R1
+R2
+r1
+!s85 0
+31
+R6
+!s107 E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v|
+!s90 E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v|-work|work|
+!i113 0
+R3
+R4
+n@u@a@r@t_@t@r@a@n@s@m@i@t@t@e@r

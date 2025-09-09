@@ -1,9 +1,4 @@
-QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-Start time: 00:41:20 on Sep 07,2025
-vlog E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v -work work 
--- Compiling module APB_SLAVE
-
-Top level modules:
-	APB_SLAVE
-End time: 00:41:20 on Sep 07,2025, Elapsed time: 0:00:00
-Errors: 0, Warnings: 0
+QuestaSim-64 vmap 2021.1 Lib Mapping Utility 2021.01 Jan 19 2021
+vmap work work 
+Copying C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/../modelsim.ini to modelsim.ini
+Modifying modelsim.ini

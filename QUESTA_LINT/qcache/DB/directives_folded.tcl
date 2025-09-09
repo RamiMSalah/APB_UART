@@ -1,1 +1,1 @@
-lint methodology soc -goal start 
+lint methodology soc -goal implementation 

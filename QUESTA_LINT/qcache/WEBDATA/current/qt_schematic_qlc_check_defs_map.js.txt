@@ -1,4 +1,13 @@
 assign_width_overflow:off
+bus_bits_not_read:on
+empty_block:off
+unloaded_input_port:on
+if_else_if_can_be_case:off
+reserved_keyword:off
+multi_driven_signal:on
+always_has_inconsistent_async_control:off
+fsm_without_one_hot_encoding:off
 always_signal_assign_large:off
-seq_block_has_duplicate_assign:off
+parameter_name_duplicate:off
+comment_not_in_english:off
 

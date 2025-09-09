@@ -1,2 +1,17 @@
-0@#@PRDATA
+0@#@tx_data
+1@#@CTRL_REG[31:4]
+2@#@STATS_REG[31:5]
+3@#@RX_DATA[31:8]
+4@#@BAUDIV[31:16]
+5@#@{rx_register[0], rx_register[9]}
+6@#@RX
+7@#@SETUP
+8@#@ACCESS
+9@#@out
+10@#@FINAL
+11@#@STATS_REG
+12@#@RX_DATA
+13@#@CTRL_REG
+14@#@PRDATA
+15@#@countdone
 

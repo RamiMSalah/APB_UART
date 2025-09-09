@@ -1,4 +1,13 @@
 CheckId@CheckName
 0@assign_width_overflow
-1@always_signal_assign_large
-2@seq_block_has_duplicate_assign
+1@bus_bits_not_read
+2@empty_block
+3@unloaded_input_port
+4@if_else_if_can_be_case
+5@reserved_keyword
+6@multi_driven_signal
+7@always_has_inconsistent_async_control
+8@fsm_without_one_hot_encoding
+9@always_signal_assign_large
+10@parameter_name_duplicate
+11@comment_not_in_english

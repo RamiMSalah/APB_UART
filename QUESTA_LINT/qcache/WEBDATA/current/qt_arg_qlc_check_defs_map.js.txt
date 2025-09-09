@@ -4,9 +4,20 @@
 4#@#module
 5#@#file
 6#@#line
-7#@#count
-8#@#limit
-9#@#signal
-10#@#line1
-11#@#line2
+7#@#bits
+8#@#port
+9#@#name
+10#@#reason
+11#@#signal
+12#@#flop1
+13#@#line1
+14#@#flop2
+15#@#line2
+16#@#count
+17#@#limit
+18#@#parameter
+19#@#module1
+20#@#file1
+21#@#module2
+22#@#file2
 

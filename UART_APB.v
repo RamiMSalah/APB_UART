@@ -1,7 +1,6 @@
 module UART_APB_TOP #(
     parameter WIDTH = 32
 )(
-    input  RX  ,
     input  PSEL,
     input  PENABLE,
     input  [WIDTH-1:0] PADDR,
@@ -10,8 +9,7 @@ module UART_APB_TOP #(
     input  PCLK,
     input  PRESETn,
     output [WIDTH-1:0] PRDATA,
-    output PREADY,
-    output TX
+    output PREADY
 );
 
     //=============================
