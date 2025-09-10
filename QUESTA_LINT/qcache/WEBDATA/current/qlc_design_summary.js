@@ -1,5 +1,5 @@
 var designData = { "DesignInfo" : [
-{ "Id" : "0" , "Name":"Register Bits", "Data": ["327"] },
+{ "Id" : "0" , "Name":"Register Bits", "Data": ["123"] },
 { "Id" : "1" , "Name":"Latch Bits", "Data": ["0"] },
 { "Id" : "2" , "Name":"User-specified Blackboxes", "Data": [] },
 { "Id" : "3" , "Name":"Inferred Blackboxes", "Data": [] },
@@ -9,4 +9,4 @@ var designData = { "DesignInfo" : [
 
 var qlcDesignName ="UART_APB_TOP";
 var qlcVersion ="Version 2021.1 4558100 win64 28-Jan-2021";
-var qlcDesignQuality ="98.350136";
+var qlcDesignQuality ="96.975250";

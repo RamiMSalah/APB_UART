@@ -1,4 +1,10 @@
-QuestaSim-64 vmap 2021.1 Lib Mapping Utility 2021.01 Jan 19 2021
-vmap work work 
-Copying C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/../modelsim.ini to modelsim.ini
-Modifying modelsim.ini
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+Start time: 21:11:23 on Sep 09,2025
+vlog E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v -work work 
+-- Compiling module APB_SLAVE
+** Warning: E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v(133): (vlog-2697) MSB 31 of part-select into 'STATS_REG' is out of bounds.
+
+Top level modules:
+	APB_SLAVE
+End time: 21:11:23 on Sep 09,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 1

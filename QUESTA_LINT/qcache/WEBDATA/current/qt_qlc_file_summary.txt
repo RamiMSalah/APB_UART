@@ -1,5 +1,5 @@
-E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v#@#14
-E:/Projects/Verilog/Projects/APB_UART/UART_APB.v#@#4
-E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v#@#11
+E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v#@#16
+E:/Projects/Verilog/Projects/APB_UART/UART_APB.v#@#7
+E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v#@#19
 E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v#@#8
 E:/Projects/Verilog/Projects/APB_UART/baudrate.v#@#1

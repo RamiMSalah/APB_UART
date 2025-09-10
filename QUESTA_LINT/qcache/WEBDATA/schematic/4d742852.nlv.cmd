@@ -1,0 +1,1 @@
+TraceHierPath;UART_APB_TOP;PRESETn,uart_rx.arst_n,PRESETn,baud_gen.counter,

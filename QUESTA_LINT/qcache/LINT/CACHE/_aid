@@ -1,4 +1,3 @@
-work=./work
 std=C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/../std
 ieee=C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/../ieee
 vital2000=C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/../vital2000
@@ -22,5 +21,6 @@ ieee_env=C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/../iee
 infact=C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/../infact
 vhdlopt_lib=C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/../vhdlopt_lib
 vh_ux01v_lib=C:/QFT_2021.1/QFT_2021.1/QFT/V2021.1/win64/share/modeltech/win64/../vh_ux01v_lib
-*RAW_COMMAND create_netlist -zdb E:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT/qcache/DB/zdb_5 -tool lint -d UART_APB_TOP -L work 
+work=./work
+*RAW_COMMAND create_netlist -zdb E:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT/qcache/DB/zdb_32 -tool lint -d UART_APB_TOP -L work 
 *COMMAND create_netlist 

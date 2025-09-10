@@ -2,19 +2,19 @@
 # Questa Static Verification System
 # Version 2021.1 4558100 win64 28-Jan-2021
 
-log created Sun Sep  7 15:58:58 2025 by Rami on DESKTOP-HQDS37Q
+log created Tue Sep  9 21:12:05 2025 by Rami on DESKTOP-HQDS37Q
 
 
 # 
 # Questa Static Verification System
 # Version 2021.1 4558100 win64 28-Jan-2021
 
-log created Sun Sep  7 15:58:33 2025 by Rami on DESKTOP-HQDS37Q
+log created Tue Sep  9 21:11:35 2025 by Rami on DESKTOP-HQDS37Q
 
 
 Command: netlist elaborate
 Command arguments:
-    -zdb E:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT/qcache/DB/zdb_5
+    -zdb E:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT/qcache/DB/zdb_32
     -tool lint
     -d UART_APB_TOP
     -L work
@@ -42,6 +42,12 @@ Lint Stage 1 of 5 - Pre Design Elaboration (4 checks)
 -- Loading module z0in_work.APB_SLAVE
 -- Loading module z0in_work.UART_TRANSMITTER
 -- Loading module z0in_work.UART_RECIVER
+Warning : Vopt warning.  (vopt-2241) Connection width does not match width of port 'PADDR'. The port definition is at: E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v(8), File 'E:/Projects/Verilog/Projects/APB_UART/UART_APB.v', Line 43.  [parser-285]
+        : Elaboration will continue.
+Warning : Vopt warning.  (vopt-2241) Connection width does not match width of port 'PWDATA'. The port definition is at: E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v(9), File 'E:/Projects/Verilog/Projects/APB_UART/UART_APB.v', Line 43.  [parser-285]
+        : Elaboration will continue.
+Warning : Vopt warning.  (vopt-2241) Connection width does not match width of port 'PRDATA'. The port definition is at: E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v(24), File 'E:/Projects/Verilog/Projects/APB_UART/UART_APB.v', Line 43.  [parser-285]
+        : Elaboration will continue.
 Optimizing 5 design-units (inlining 0/5 module instances):
 -- Optimizing module z0in_work.baudrate(fast)
 Lint Stage-1 100% complete [Total Progress -   7%]
@@ -49,28 +55,35 @@ Lint Stage-1 100% complete [Total Progress -   7%]
 Lint Stage 2 of 5 - Design Elaboration (262 checks)
 ----------------------------------------------------
 -- Optimizing module z0in_work.APB_SLAVE(fast)
+Warning : Vopt warning.  (vopt-2697) MSB 31 of part-select into 'STATS_REG' is out of bounds, File 'E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v', Line 133.  [parser-285]
+        : Elaboration will continue.
 Lint Stage-2  20% complete (1 out of 5 modules checked) [Total Progress -   8%]
 -- Optimizing module z0in_work.UART_TRANSMITTER(fast)
 Lint Stage-2  40% complete (2 out of 5 modules checked) [Total Progress -  12%]
 -- Optimizing module z0in_work.UART_RECIVER(fast)
 Lint Stage-2  60% complete (3 out of 5 modules checked) [Total Progress -  15%]
 -- Optimizing module z0in_work.UART_APB_TOP(fast)
+Warning : Vopt warning.  (vopt-2685) [TFMPC] - Too few port connections for 'uart_rx'.  Expected 10, found 9, File 'E:/Projects/Verilog/Projects/APB_UART/UART_APB.v', Line 85.  [parser-285]
+        : Elaboration will continue.
+Warning : Vopt warning.  (vopt-2718) [TFMPC] - Missing connection for port 'rx_error', File 'E:/Projects/Verilog/Projects/APB_UART/UART_APB.v', Line 85.  [parser-285]
+        : Elaboration will continue.
 Lint Stage-2  80% complete (4 out of 5 modules checked) [Total Progress -  19%]
 Optimized design name is zi_opt_def_834330211_1
 Lint Stage-2 100% complete (5 out of 5 modules checked) [Total Progress -  23%]
-End of log Sun Sep  7 15:58:40 2025
+Summary: 6 Warnings in processing "netlist elaborate"
+End of log Tue Sep  9 21:11:42 2025
 
 
 # 
 # Questa Static Verification System
 # Version 2021.1 4558100 win64 28-Jan-2021
 
-log created Sun Sep  7 15:58:42 2025 by Rami on DESKTOP-HQDS37Q
+log created Tue Sep  9 21:11:45 2025 by Rami on DESKTOP-HQDS37Q
 
 
 Command: netlist create
 Command arguments:
-    -zdb E:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT/qcache/DB/zdb_5
+    -zdb E:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT/qcache/DB/zdb_32
     -tool lint
     -d UART_APB_TOP
     -L work
@@ -110,20 +123,21 @@ Lint Stage-5  90% complete [Total Progress -  98%]
 Lint Stage-5 100% complete [Total Progress - 100%]
 
 Lint Checking Completed
-##Time Taken (Synthesis) = 2420.000000 ticks = 2.420000 secs
+##Time Taken (Synthesis) = 2574.000000 ticks = 2.574000 secs
 
-End of log Sun Sep  7 15:58:50 2025
+Summary: 6 Warnings in processing "netlist create"
+End of log Tue Sep  9 21:11:53 2025
 
 
-# Reading design database from E:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT/qcache/LINT/CACHE...completed (0.002 (s)).
-End of log Sun Sep  7 15:58:52 2025
+# Reading design database from E:/Projects/Verilog/Projects/APB_UART/QUESTA_LINT/qcache/LINT/CACHE...completed (0.01 (s)).
+End of log Tue Sep  9 21:11:57 2025
 
 
 # 
 # Questa Static Verification System
 # Version 2021.1 4558100 win64 28-Jan-2021
 
-log created Sun Sep  7 15:58:52 2025 by Rami on DESKTOP-HQDS37Q
+log created Tue Sep  9 21:11:57 2025 by Rami on DESKTOP-HQDS37Q
 
 
 Questa Debug flags:
@@ -131,34 +145,45 @@ Questa Debug flags:
 
 
 ## Applying Lint Waivers...
-Final Process Statistics: Max memory 277MB, CPU time 17s, Total time 19s
-End of log Sun Sep  7 15:58:56 2025
+
+Message Summary
+---------------------------------------------------------------------------
+Count  Type     Message ID         Summary
+---------------------------------------------------------------------------
+    6  Warning  parser-285         Vopt warning.
+
+Final Process Statistics: Max memory 278MB, CPU time 20s, Total time 21s
+End of log Tue Sep  9 21:12:03 2025
 
 
 Result Summary
 -----------------------------------------------------------
-Error (4)
+Error (12)
 -----------------------------------------------------------
-  assign_width_overflow                   :1
-  empty_block                             :1
+  assign_width_underflow                  :4
+  array_index_with_expr                   :1
+  inst_port_width_mismatch                :3
   multi_driven_signal                     :2
+  part_select_illegal                     :1
+  seq_block_first_stmt_not_if             :1
 
 -----------------------------------------------------------
-Warning (10)
+Warning (4)
 -----------------------------------------------------------
-  always_has_inconsistent_async_control   :2
-  bus_bits_not_read                       :5
-  always_signal_assign_large              :3
+  always_has_inconsistent_async_control   :1
+  always_signal_assign_large              :2
+  unconnected_inst_output                 :1
 
 -----------------------------------------------------------
-Info (16)
+Info (20)
 -----------------------------------------------------------
+  flop_without_control                    :2
   fsm_without_one_hot_encoding            :3
   if_else_if_can_be_case                  :1
-  parameter_name_duplicate                :6
+  parameter_name_duplicate                :7
   reserved_keyword                        :4
-  unloaded_input_port                     :1
-  comment_not_in_english                  :1
+  comment_not_in_english                  :2
+  identifier_with_error_warning           :1
 
 -----------------------------------------------------------
 Resolved (0)

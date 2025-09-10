@@ -1,0 +1,1 @@
+TraceHierPath;UART_APB_TOP;PCLK,uart_rx.clk,PCLK,baud_gen.counter,

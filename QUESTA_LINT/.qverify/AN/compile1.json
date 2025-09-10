@@ -1,0 +1,3 @@
+[
+{"recid":1, "Severity":"Warning", "Message":"(vlog-2697) MSB 31 of part-select into 'STATS_REG' is out of bounds.", "Backref":"E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v,133"}
+]

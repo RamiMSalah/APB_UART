@@ -1,46 +1,48 @@
 module UART_APB_TOP #(
-    parameter WIDTH = 32
+    parameter WIDTH32 = 32       ,
+    parameter WIDTH8  = 8        ,
+    parameter WIDTH18 = 18     
 )(
-    input  PSEL,
-    input  PENABLE,
-    input  [WIDTH-1:0] PADDR,
-    input  PWRITE,
-    input  [WIDTH-1:0] PWDATA,
-    input  PCLK,
-    input  PRESETn,
-    output [WIDTH-1:0] PRDATA,
+    input  PSEL                  ,
+    input  PENABLE               ,
+    input  PWRITE                ,
+    input  PCLK                  ,
+    input  PRESETn               ,
+    input  BAUD                  ,
+    input  [WIDTH32-1:0] PADDR   ,
+    input  [WIDTH32-1:0] PWDATA  , 
+    output [WIDTH32-1:0] PRDATA  ,
     output PREADY
 );
 
-    //=============================
-    // Wires
-    //=============================
-    wire        tx_busy, tx_done;
-    wire        rx_busy, rx_done;
-    wire [7:0]  tx_data;
-    wire [7:0]  rx_data;
-    wire        tx_en, tx_rst;
-    wire        rx_en, rx_rst;
-
-    wire        uart_line;   // الخط اللي هيوصل TX → RX
-    wire        BCLK;        // Baud Clock
-
-    //=============================
-    // BAUD GENERATOR
-    //=============================
-    baudrate #(
-        .BAUD(9600),
-        .FREQUENCY(100_000_000)
-    ) baud_gen (
+/*=================================================================================*/
+// WIRING
+/*=================================================================================*/
+    wire        tx_busy, tx_done                    ;
+    wire        rx_busy, rx_done                    ;
+    wire        tx_en, tx_rst                       ;
+    wire        rx_en, rx_rst                       ;
+    wire        uart_line                           ;   
+    wire        BCLK                                ;       
+    wire [WIDTH18:0] baud_div                     ;
+    wire [WIDTH8-1:0]  tx_data                      ;
+    wire [WIDTH8-1:0]  rx_data                      ;
+/*=================================================================================*/
+// BAUD_RATE
+/*=================================================================================*/
+    baudrate
+     baud_gen (
+        .baud_div(baud_div),
         .clk(PCLK),
         .arst_n(PRESETn),
         .BCLK(BCLK)
     );
 
-    //=============================
-    // APB SLAVE
-    //=============================
+/*=================================================================================*/
+// APB_SLAVE
+/*=================================================================================*/
     APB_SLAVE apb (
+        .baud_div(baud_div),
         .PCLK(PCLK),
         .PRESETn(PRESETn),
         .PSEL(PSEL),
@@ -64,9 +66,9 @@ module UART_APB_TOP #(
         .rx_rst(rx_rst)
     );
 
-    //=============================
-    // UART TRANSMITTER
-    //=============================
+/*=================================================================================*/
+// TRANSMITTER
+/*=================================================================================*/
     UART_TRANSMITTER uart_tx (
         .clk(PCLK),
         .arst_n(PRESETn),
@@ -76,22 +78,21 @@ module UART_APB_TOP #(
         .data(tx_data),
         .busy(tx_busy),
         .done(tx_done),
-        .tx_data(uart_line)   // يخرج على خط UART
+        .tx_data(uart_line)   
     );
 
-    //=============================
-    // UART RECEIVER
-    //=============================
+/*=================================================================================*/
+// RECIVER
+/*=================================================================================*/
     UART_RECIVER uart_rx (
         .clk(PCLK),
         .arst_n(PRESETn),
         .rst(rx_rst),
         .BCLK(BCLK),
         .rx_en(rx_en),
-        .rx_data(uart_line),   // يدخل نفس الخط
+        .rx_data(uart_line),   
         .busy(rx_busy),
         .done(rx_done),
         .out(rx_data)
     );
-
 endmodule

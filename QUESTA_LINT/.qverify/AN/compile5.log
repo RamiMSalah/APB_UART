@@ -1,9 +1,9 @@
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
-Start time: 15:57:05 on Sep 07,2025
+Start time: 21:11:24 on Sep 09,2025
 vlog E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v -work work 
 -- Compiling module UART_TRANSMITTER
 
 Top level modules:
 	UART_TRANSMITTER
-End time: 15:57:05 on Sep 07,2025, Elapsed time: 0:00:00
+End time: 21:11:24 on Sep 09,2025, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0

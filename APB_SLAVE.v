@@ -28,6 +28,7 @@ output rx_en                                  ,
 output rx_rst                                 ,
 output tx_en                                  ,
 output tx_rst                                 ,
+output [18:0] baud_div                        ,
 output [7:0] tx_data                           
 );
 
@@ -64,7 +65,7 @@ always @(posedge PCLK or negedge PRESETn) begin
                 TX_DATA <= {24'b0,PWDATA[7:0]};
           end 
           else if(PADDR==32'h0004) begin
-                BAUDIV <= {16'b0,PWDATA[15:0]};
+                BAUDIV <= PWDATA[18:0];
           end
         end 
         else begin
@@ -82,7 +83,7 @@ always @(posedge PCLK or negedge PRESETn) begin
                 PRDATA <= {24'b0,RX_DATA[7:0]};
             end 
             else begin
-                PRDATA <= {16'b0,BAUDIV[15:0]};
+                PRDATA <= {13'b0,BAUDIV[18:0]};
             end
           end
         end
@@ -128,9 +129,10 @@ end
     assign rx_rst = CTRL_REG[1] ;
     assign tx_rst = CTRL_REG[2] ;
     assign tx_en = CTRL_REG[3] ;
+    assign baud_div = BAUDIV;
 
 //TX_REG SIGNALS
-    assign tx_data = TX_DATA ;
+    assign tx_data = TX_DATA[7:0] ;
 
 //STATS_REG SIGNALS
 always @(posedge PCLK or negedge PRESETn) begin

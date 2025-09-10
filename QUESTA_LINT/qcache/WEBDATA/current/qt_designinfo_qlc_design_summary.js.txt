@@ -1,4 +1,4 @@
-Register Bits;327
+Register Bits;123
 Latch Bits;0
 User-specified Blackboxes;
 Inferred Blackboxes;

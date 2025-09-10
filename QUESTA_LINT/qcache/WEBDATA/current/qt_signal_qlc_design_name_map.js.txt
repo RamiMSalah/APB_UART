@@ -1,17 +1,16 @@
-0@#@tx_data
-1@#@CTRL_REG[31:4]
-2@#@STATS_REG[31:5]
-3@#@RX_DATA[31:8]
-4@#@BAUDIV[31:16]
-5@#@{rx_register[0], rx_register[9]}
-6@#@RX
-7@#@SETUP
-8@#@ACCESS
-9@#@out
-10@#@FINAL
-11@#@STATS_REG
-12@#@RX_DATA
+0@#@PRDATA
+1@#@rx_error
+2@#@PADDR
+3@#@PWDATA
+4@#@SETUP
+5@#@ACCESS
+6@#@out
+7@#@FINAL
+8@#@STATS_REG
+9@#@RX_DATA
+10@#@STATS_REG[31:4]
+11@#@uart_rx.r_Rx_Data_R
+12@#@uart_rx.r_Rx_Data
 13@#@CTRL_REG
-14@#@PRDATA
-15@#@countdone
+14@#@rx_register[counter+1]
 

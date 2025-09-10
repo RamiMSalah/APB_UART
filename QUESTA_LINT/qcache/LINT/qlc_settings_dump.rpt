@@ -378,7 +378,7 @@ Section 1.1 : Methodology and Checks
   <PassedCheck><always_signal_assign_large|Flagged
   <PassedCheck><always_without_event|Unflagged
   <PassedCheck><arith_expr_with_conditional_operator|Unflagged
-  <PassedCheck><array_index_with_expr|Unflagged
+  <PassedCheck><array_index_with_expr|Flagged
   <PassedCheck><assign_chain|Unflagged
   <PassedCheck><assign_int_to_reg|Unflagged
   <PassedCheck><assign_or_comparison_has_x|Unflagged
@@ -390,8 +390,8 @@ Section 1.1 : Methodology and Checks
   <PassedCheck><assign_reg_to_int|Unflagged
   <PassedCheck><assign_reg_to_real|Unflagged
   <PassedCheck><assign_to_supply_net|Unflagged
-  <PassedCheck><assign_width_overflow|Flagged
-  <PassedCheck><assign_width_underflow|Unflagged
+  <PassedCheck><assign_width_overflow|Unflagged
+  <PassedCheck><assign_width_underflow|Flagged
   <PassedCheck><assign_with_multi_arith_operations|Unflagged
   <PassedCheck><assigns_mixed_in_always_block|Unflagged
   <PassedCheck><assigns_mixed|Unflagged
@@ -406,7 +406,7 @@ Section 1.1 : Methodology and Checks
   <PassedCheck><blocking_assign_in_seq_block|Unflagged
   <PassedCheck><bus_bit_as_clk|Unflagged
   <PassedCheck><bus_bits_in_multi_seq_blocks|Unflagged
-  <PassedCheck><bus_bits_not_read|Flagged
+  <PassedCheck><bus_bits_not_read|Unflagged
   <PassedCheck><bus_bits_not_set|Unflagged
   <PassedCheck><bus_conn_to_inst_reversed|Unflagged
   <PassedCheck><bus_conn_to_prim_gate|Unflagged
@@ -472,7 +472,7 @@ Section 1.1 : Methodology and Checks
   <PassedCheck><div_mod_rhs_var|Unflagged
   <PassedCheck><div_mod_rhs_zero|Unflagged
   <PassedCheck><else_condition_dangling|Unflagged
-  <PassedCheck><empty_block|Flagged
+  <PassedCheck><empty_block|Unflagged
   <PassedCheck><empty_module|Unflagged
   <PassedCheck><empty_stmt|Unflagged
   <PassedCheck><enum_decl_invalid|Unflagged
@@ -485,7 +485,7 @@ Section 1.1 : Methodology and Checks
   <PassedCheck><flop_output_in_initial|Unflagged
   <PassedCheck><flop_redundant|Unflagged
   <PassedCheck><flop_with_inverted_clock|Unflagged
-  <PassedCheck><flop_without_control|Unflagged
+  <PassedCheck><flop_without_control|Flagged
   <PassedCheck><for_loop_var_init_not_const|Unflagged
   <PassedCheck><for_loop_with_wait|Unflagged
   <PassedCheck><for_stmt_with_complex_logic|Unflagged
@@ -509,7 +509,7 @@ Section 1.1 : Methodology and Checks
   <PassedCheck><gen_label_missing|Unflagged
   <PassedCheck><gen_loop_index_not_int|Unflagged
   <PassedCheck><generic_map_ordered|Unflagged
-  <PassedCheck><identifier_with_error_warning|Unflagged
+  <PassedCheck><identifier_with_error_warning|Flagged
   <PassedCheck><if_condition_with_tristate|Unflagged
   <PassedCheck><if_else_if_can_be_case|Flagged
   <PassedCheck><if_else_nested_large|Unflagged
@@ -525,7 +525,7 @@ Section 1.1 : Methodology and Checks
   <PassedCheck><inout_port_unused|Unflagged
   <PassedCheck><input_port_set|Unflagged
   <PassedCheck><inst_param_width_overflow|Unflagged
-  <PassedCheck><inst_port_width_mismatch|Unflagged
+  <PassedCheck><inst_port_width_mismatch|Flagged
   <PassedCheck><int_without_range|Unflagged
   <PassedCheck><latch_inferred|Unflagged
   <PassedCheck><library_excluded|Unflagged
@@ -560,7 +560,7 @@ Section 1.1 : Methodology and Checks
   <PassedCheck><package_excluded|Unflagged
   <PassedCheck><parameter_count_large|Unflagged
   <PassedCheck><parameter_name_duplicate|Flagged
-  <PassedCheck><part_select_illegal|Unflagged
+  <PassedCheck><part_select_illegal|Flagged
   <PassedCheck><port_conn_is_expression|Unflagged
   <PassedCheck><port_exp_with_integer|Unflagged
   <PassedCheck><power_operand_invalid|Unflagged
@@ -595,7 +595,7 @@ Section 1.1 : Methodology and Checks
   <PassedCheck><sensitivity_list_var_both_edges|Unflagged
   <PassedCheck><sensitivity_list_var_missing|Unflagged
   <PassedCheck><sensitivity_list_var_modified|Unflagged
-  <PassedCheck><seq_block_first_stmt_not_if|Unflagged
+  <PassedCheck><seq_block_first_stmt_not_if|Flagged
   <PassedCheck><seq_block_has_complex_cond|Unflagged
   <PassedCheck><seq_block_has_duplicate_assign|Unflagged
   <PassedCheck><seq_block_has_multi_clks|Unflagged
@@ -629,14 +629,14 @@ Section 1.1 : Methodology and Checks
   <PassedCheck><tristate_other_desc_mixed|Unflagged
   <PassedCheck><two_state_data_type|Unflagged
   <PassedCheck><unconnected_inst_input|Unflagged
-  <PassedCheck><unconnected_inst_output|Unflagged
+  <PassedCheck><unconnected_inst_output|Flagged
   <PassedCheck><unconnected_inst|Unflagged
   <PassedCheck><undriven_latch_data|Unflagged
   <PassedCheck><undriven_latch_enable|Unflagged
   <PassedCheck><undriven_reg_clock|Unflagged
   <PassedCheck><undriven_reg_data|Unflagged
   <PassedCheck><undriven_signal|Unflagged
-  <PassedCheck><unloaded_input_port|Flagged
+  <PassedCheck><unloaded_input_port|Unflagged
   <PassedCheck><unresolved_module|Unflagged
   <PassedCheck><unsynth_access_type|Unflagged
   <PassedCheck><unsynth_alias_declaration|Unflagged

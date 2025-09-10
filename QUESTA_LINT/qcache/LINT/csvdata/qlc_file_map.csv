@@ -1,6 +1,6 @@
 FileId@FileName
 0@E:/Projects/Verilog/Projects/APB_UART/APB_SLAVE.v
-1@E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v
-2@E:/Projects/Verilog/Projects/APB_UART/UART_APB.v
+1@E:/Projects/Verilog/Projects/APB_UART/UART_APB.v
+2@E:/Projects/Verilog/Projects/APB_UART/UART_RECIVER.v
 3@E:/Projects/Verilog/Projects/APB_UART/baudrate.v
 4@E:/Projects/Verilog/Projects/APB_UART/UART_TRANSMITTER.v
